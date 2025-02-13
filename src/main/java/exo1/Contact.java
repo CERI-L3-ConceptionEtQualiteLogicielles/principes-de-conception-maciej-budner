@@ -3,6 +3,7 @@ package exo1;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Contact implements ContactService {
     private static List<Contact> lesContacts = new ArrayList<>();
     private String nom;
@@ -44,13 +45,25 @@ public class Contact implements ContactService {
         // Logique pour sauvegarder les contacts dans une base de données
     }
 
-    public void envoiEmail(Contact contact, String message) {
-        // Logique pour envoyer un email
+
+    public void envoiMessage(Object methodeEnvoi, Contact contact, String message){
+        ServiceEnvoieContact envoie = null;
+        //on fait la dif avec un String qui dit comment envoyer
+        envoie.envoiMessage(methodeEnvoi, this, contact, message);
     }
 
+    /* single service, contact s'occupe pas de ça
+    public void envoiEmail(Contact contact, String message) {
+
+        //maintenant on peut envoyer un mail
+        //fonctionEnvoieMail(Envoyeur, destinataire, objet, message);
+    }
+    */
     @Override
     public String toString() {
         return "Nom: " + this.getNom() + ", Numéro: " + this.getNumero();
     }
+
+
 }
 
