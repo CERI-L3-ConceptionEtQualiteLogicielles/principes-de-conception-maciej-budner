@@ -8,25 +8,32 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ContactTeste {
+    Contact contactEnvoyeur, contactDestinataire;
+
+    @BeforeEach
+    void setUp(){
+
+        contactEnvoyeur = new Contact("testMail", "06");
+        contactDestinataire = new Contact("destinataire", "07");
+    }
 
     @Test
     public void testAfficheContact(){
 
-        Contact contact;
-        contact = new Contact("test","06");
-        contact.afficheContacts();
-
+        contactEnvoyeur.afficheContacts();
     }
 
     @Test
     public void testEnvoieMail(){
-        Contact contactEnvoyeur, contactDestinataire;
-        contactEnvoyeur = new Contact("testMail", "06");
-        contactDestinataire = new Contact("destinataire", "07");
 
         Mail mail = new Mail();
         contactEnvoyeur.envoi(mail, contactEnvoyeur, contactDestinataire, "test envoie mail");
     }
 
+    @Test
+    public void testEnvoieSMS(){
+        SMS sms = new SMS();
+        contactEnvoyeur.envoi(sms, contactEnvoyeur, contactDestinataire, "test envoie sms");
+    }
 
 }
