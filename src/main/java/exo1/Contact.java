@@ -23,7 +23,7 @@ public class Contact implements ContactService {
     }
 
     public String getInfoContact() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero();
+        return "Nom: " + this.getNom() + ", Numéro: " + this.getNumero();
     }
 
     public void ajouteContact(Contact contact) {
@@ -36,7 +36,7 @@ public class Contact implements ContactService {
 
     public void afficheContacts() {
         for (Contact contact : lesContacts) {
-            System.out.println("Nom: " + contact.getNom() + ", Numéro: " + contact.getNumero());
+            System.out.println(contact);
         }
     }
 
@@ -50,7 +50,7 @@ public class Contact implements ContactService {
 
     @Override
     public String toString() {
-        return "Nom: " + getNom() + ", Numéro: " + getNumero();
+        return "Nom: " + this.getNom() + ", Numéro: " + this.getNumero();
     }
 }
 
