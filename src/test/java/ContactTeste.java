@@ -25,6 +25,12 @@ public class ContactTeste {
     }
 
     @Test
+    public void testAjoueContactDansLaListe(){
+        contactEnvoyeur.ajouteContact(contactDestinataire);
+        contactEnvoyeur.afficheContacts();
+    }
+
+    @Test
     public void testEnvoieMail(){
 
         Mail mail = new Mail();

@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public class Contact implements ContactService {
-    private static List<Contact> lesContacts = new ArrayList<>();
+    private List<Contact> lesContacts = new ArrayList<>();
     private String nom;
     private String numero;
 
