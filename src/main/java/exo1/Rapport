@@ -14,3 +14,6 @@ Rapport sur la class Contact:
 
 - la class Contact a respecter son cahier de charge
 -se qui faut modifier c'est getInfoContact et toString, factoriser afficheContact et compléter sauveEnBDE et envoieMail
+
+-single responsability, contact qui peut rajouter dans contact?, contact qui envoie un mail?
+    sauvegardeEnBD, pas sur que c'est contact qui le fait mais je pense que c'est possible
