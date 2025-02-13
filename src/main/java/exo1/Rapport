@@ -1,0 +1,16 @@
+Rapport sur la class Contact:
+-Contact uttilise une interface ContactService, qui est une cahier de charge où la class Contact devra respecter
+-Contact a 3 valeur, une liste de contact , le nom et le numero
+- dans le constructeur je ne voie pas de probleme, on creer un contact que lon va rajouter dans notre liste
+- getNom/num sont bon
+- getInfoContact, il y a une chose qui me dérange, c'est quand on appele getNom() on ne sais pas le quelle on doit recupérer de non
+    donc je pense qui faut rajouter this.getNom()
+-ajouterContact(), a laire bon, on add un contact, passer on argument, dans la liste
+-suprimerContact(), a laire bon, on remove un contact passer on argument, de la liste
+-afficherContact est bien ecrit mais on peut le factorier on uttiliser lafonction toString plutot que de re ecrire la meme chose
+-sauveEnBDE et envoieMail faut les conpléter
+-toString est identique a getInfoContact mais cela va depend de se que on veut on faire mais je trouve que getInfoContact est inutil
+    car la list a deja un parametre pour chercher un contact et sa nous renvoie un String donc on ne peut pas l'uttiliser sans le manipuler avant
+
+- la class Contact a respecter son cahier de charge
+-se qui faut modifier c'est getInfoContact et toString, factoriser afficheContact et compléter sauveEnBDE et envoieMail
