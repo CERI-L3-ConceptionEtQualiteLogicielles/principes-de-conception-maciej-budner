@@ -1,5 +1,6 @@
 
 import exo1.Contact;
+import exo1.EnvoiPhoto;
 import exo1.Mail;
 import exo1.SMS;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,4 +37,9 @@ public class ContactTeste {
         contactEnvoyeur.envoi(sms, contactEnvoyeur, contactDestinataire, "test envoie sms");
     }
 
+    @Test
+    public void testEnvoiePhoto(){
+        EnvoiPhoto envoiPhoto = new EnvoiPhoto();
+        contactEnvoyeur.envoi(envoiPhoto, contactEnvoyeur, contactDestinataire, "urlphoto");
+    }
 }

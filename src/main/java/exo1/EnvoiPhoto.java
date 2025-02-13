@@ -9,7 +9,7 @@ public class EnvoiPhoto extends Contact{
     
     //suposant que message soit un String qui est l'url de notre image
     public void envoi(ContactService methodeEnvoi,Contact envoyeur, Contact destinataire, String message){
-        ServiceEnvoiPhoto serviceEnvoiPhoto = null;
+        ServiceEnvoiPhoto serviceEnvoiPhoto = new ServiceEnvoiPhoto();
         serviceEnvoiPhoto.envoiPhoto(destinataire, message);
         System.out.println("Photo envoyer");
     }
