@@ -41,15 +41,14 @@ public class Contact implements ContactService {
         }
     }
 
-    public void sauvegardeEnBD() {
-        // Logique pour sauvegarder les contacts dans une base de données
+    @Override
+    public void envoi(ContactService methodeEnvoi,Contact envoyeur, Contact destinataire, String message) {
+        //mais fait rien, elle est ici car faut respecter le cahier de charge
+        methodeEnvoi.envoi(methodeEnvoi,envoyeur,destinataire,message);
     }
 
-
-    public void envoiMessage(Object methodeEnvoi, Contact contact, String message){
-        ServiceEnvoieContact envoie = null;
-        //on fait la dif avec un String qui dit comment envoyer
-        envoie.envoiMessage(methodeEnvoi, this, contact, message);
+    public void sauvegardeEnBD() {
+        // Logique pour sauvegarder les contacts dans une base de données
     }
 
     /* single service, contact s'occupe pas de ça
