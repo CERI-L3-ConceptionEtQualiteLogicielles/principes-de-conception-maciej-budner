@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Contact implements ContactService {
     private List<Contact> lesContacts = new ArrayList<>();
+    private static ContactBuild autreInfoContact = new ContactBuild();
     private String nom;
     private String numero;
 
@@ -64,5 +65,36 @@ public class Contact implements ContactService {
     }
 
 
+    //je suis obliger de mettre tout les add
+    public void addNumero(String numero){
+        this.autreInfoContact = this.autreInfoContact.addNumero(numero);
+
+    }
+    public void addNom(String nom){
+        this.autreInfoContact = this.autreInfoContact.addNom(nom);
+    }
+    public void addPrenom(String prenom){
+        this.autreInfoContact = this.autreInfoContact.addPrenom(prenom);
+    }
+    public void addVille(String ville){
+        this.autreInfoContact = this.autreInfoContact.addVille(ville);
+    }
+    public void addMail(String mail){
+        this.autreInfoContact = this.autreInfoContact.addMail(mail);
+    }
+    public void addAddress(String address){
+        this.autreInfoContact = this.autreInfoContact.addAddress(address);
+    }
+    public void addDateNaissance(String dateNaissance){
+        this.autreInfoContact = this.autreInfoContact.addDateNaissance(dateNaissance);
+    }
+
+    public static void setAutreInfoContact(ContactBuild autreInfoContact) {
+        Contact.autreInfoContact = autreInfoContact;
+    }
+
+    public void build(String nom, String numero){
+
+    }
 }
 
