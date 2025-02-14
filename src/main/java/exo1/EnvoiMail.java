@@ -1,7 +1,7 @@
 package exo1;
 
-public class Mail extends Contact{
-    public Mail() {
+public class EnvoiMail extends Contact{
+    public EnvoiMail() {
         super(" ", " ");
     }
 

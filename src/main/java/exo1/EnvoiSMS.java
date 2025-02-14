@@ -1,7 +1,7 @@
 package exo1;
 
-public class SMS extends Contact{
-    public SMS() {
+public class EnvoiSMS extends Contact{
+    public EnvoiSMS() {
         super(" ", " ");
     }
     public void envoi(ContactService methodeEnvoi,Contact envoyeur, Contact destinataire, String message){

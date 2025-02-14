@@ -1,12 +1,10 @@
 
 import exo1.Contact;
 import exo1.EnvoiPhoto;
-import exo1.Mail;
-import exo1.SMS;
+import exo1.EnvoiMail;
+import exo1.EnvoiSMS;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class ContactTeste {
     Contact contactEnvoyeur, contactDestinataire;
@@ -33,13 +31,13 @@ public class ContactTeste {
     @Test
     public void testEnvoieMail(){
 
-        Mail mail = new Mail();
+        EnvoiMail mail = new EnvoiMail();
         contactEnvoyeur.envoi(mail, contactEnvoyeur, contactDestinataire, "test envoie mail");
     }
 
     @Test
     public void testEnvoieSMS(){
-        SMS sms = new SMS();
+        EnvoiSMS sms = new EnvoiSMS();
         contactEnvoyeur.envoi(sms, contactEnvoyeur, contactDestinataire, "test envoie sms");
     }
 
