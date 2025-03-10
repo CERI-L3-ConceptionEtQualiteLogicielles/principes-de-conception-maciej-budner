@@ -55,11 +55,15 @@ public class ContactBuild{
         return "Numero:"+this.numero+" Nom:"+this.nom+" prenom:"+this.firstName+" ville:"+this.ville+" address:"+this.address+" mail:"+this.mail+" dateNaissance:"+this.dateNaissance;
     }
 
-    public Contact build(String nom, String numero) {
+    public Contact build(String nom, String numero,String prenom, String ville, String mail, String dateNaissance, String address) {
         Contact contact = new Contact(nom, numero);
-        contact.ajouteContact(contact);
         this.nom = nom;
         this.numero = numero;
+        this.firstName = prenom;
+        this.ville = ville;
+        this.mail = mail;
+        this.dateNaissance = dateNaissance;
+        this.address = address;
         contact.setAutreInfoContact(this);
         return contact;
     }

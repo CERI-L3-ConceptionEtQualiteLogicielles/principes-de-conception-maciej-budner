@@ -58,4 +58,14 @@ public class ContactTeste {
         contact.addPrenom("Martin");
         System.out.println(contact.toStringPlusInfoContact());
     }
+
+    @Test
+    public void testDeFonctionBuildCantatactQuiCrerNouveauCantact(){
+        Contact contact = new Contact("Pierre", "06");
+
+        contact.build("Martin", "06", "Martin", "", "", "", "");
+
+        int nbContact = contact.returnLeNombreDeContactDansNotreRepertoire();
+        System.out.println("vous avez "+nbContact+" contact");
+    }
 }

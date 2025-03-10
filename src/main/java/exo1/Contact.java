@@ -99,8 +99,12 @@ public class Contact implements ContactService {
         return this.autreInfoContact.toString();
     }
 
-    public void build(String nom, String numero){
+    public void  build(String nom, String numero,String prenom, String ville, String mail, String dateNaissance, String address){
+        this.ajouteContact(this.autreInfoContact.build(nom, numero,prenom,ville, mail, dateNaissance, address));
+    }
 
+    public int returnLeNombreDeContactDansNotreRepertoire(){
+        return this.lesContacts.size();
     }
 }
 
