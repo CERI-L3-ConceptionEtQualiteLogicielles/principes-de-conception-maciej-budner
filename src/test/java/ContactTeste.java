@@ -1,8 +1,5 @@
 
-import exo1.Contact;
-import exo1.EnvoiPhoto;
-import exo1.EnvoiMail;
-import exo1.EnvoiSMS;
+import exo1.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -67,5 +64,17 @@ public class ContactTeste {
 
         int nbContact = contact.returnLeNombreDeContactDansNotreRepertoire();
         System.out.println("vous avez "+nbContact+" contact");
+    }
+
+    @Test
+    public void testDeFormaGetInfoContact(){
+        Contact contact = new Contact("Pierre", "06");
+        FormaInfoContactJSON json = new FormaInfoContactJSON(contact.getNom(), contact.getNumero());
+        FormaInfoCantactXML xml = new FormaInfoCantactXML(contact.getNom(), contact.getNumero());
+
+        System.out.println(contact.getInfoContact());
+        System.out.println(json.getInfoContact());
+        System.out.println(xml.getInfoContact());
+
     }
 }
