@@ -46,4 +46,16 @@ public class ContactTeste {
         EnvoiPhoto envoiPhoto = new EnvoiPhoto();
         contactEnvoyeur.envoi(envoiPhoto, contactEnvoyeur, contactDestinataire, "urlphoto");
     }
+
+    @Test
+    public void testAjoueAutreInformationContact(){
+        Contact contact = new Contact("Pierre", "06");
+
+        contact.addVille("Volle");
+        contact.addAddress("Rue du seum");
+        contact.addMail("gmail");
+        contact.addDateNaissance("11/11/1911");
+        contact.addPrenom("Martin");
+        System.out.println(contact.toStringPlusInfoContact());
+    }
 }

@@ -13,6 +13,8 @@ public class Contact implements ContactService {
     public Contact(String nom, String numero) {
         this.nom = nom;
         this.numero = numero;
+        this.addNom(nom);
+        this.addNumero(numero);
         lesContacts.add(this);
     }
 
@@ -91,6 +93,10 @@ public class Contact implements ContactService {
 
     public static void setAutreInfoContact(ContactBuild autreInfoContact) {
         Contact.autreInfoContact = autreInfoContact;
+    }
+
+    public String toStringPlusInfoContact(){
+        return this.autreInfoContact.toString();
     }
 
     public void build(String nom, String numero){

@@ -1,8 +1,5 @@
 package exo1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ContactBuild{
     //pas sur comment uttiliser la liste mais faut qu'il a les meme attribue que contact
     //private List<Contact> lesContact = new ArrayList<>();
@@ -54,6 +51,10 @@ public class ContactBuild{
         return this;
     }
 
+    public String toString(){
+        return "Numero:"+this.numero+" Nom:"+this.nom+" prenom:"+this.firstName+" ville:"+this.ville+" address:"+this.address+" mail:"+this.mail+" dateNaissance:"+this.dateNaissance;
+    }
+
     public Contact build(String nom, String numero) {
         Contact contact = new Contact(nom, numero);
         contact.ajouteContact(contact);
@@ -61,6 +62,5 @@ public class ContactBuild{
         this.numero = numero;
         contact.setAutreInfoContact(this);
         return contact;
-
     }
 }
