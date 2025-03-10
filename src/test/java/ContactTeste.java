@@ -77,4 +77,13 @@ public class ContactTeste {
         System.out.println(xml.getInfoContact());
 
     }
+
+    @Test
+    public void testGestionnaireDeContact(){
+        GestionnaireDeContacts gestionContact;
+
+        //si je fait new sa plente car il est privet
+        //GestionnaireDeContacts gestion = new GestionnaireDeContacts();
+
+    }
 }
